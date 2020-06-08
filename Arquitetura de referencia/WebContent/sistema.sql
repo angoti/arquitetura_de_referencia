@@ -3,10 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Jun-2019 às 04:29
--- Versão do servidor: 10.3.15-MariaDB
--- versão do PHP: 7.3.6
-
+-- Tempo de geraÃ§Ã£o: 07-Jun-2019 Ã s 04:29
+-- VersÃ£o do servidor: 10.3.15-MariaDB
+-- versÃ£o do PHP: 7.3.6
+create database sistema;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -40,11 +40,11 @@ CREATE TABLE `usuarios` (
 --
 
 --
--- �ndices para tabelas despejadas
+-- Índices para tabelas despejadas
 --
 
 --
--- �ndices para tabela `usuarios`
+-- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
