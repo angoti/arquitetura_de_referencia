@@ -18,10 +18,14 @@ public class FabricaDeTarefa {
 		tarefas.put("GET/atualizar", t);
 		tarefas.put("POST/atualizar", t);
 		tarefas.put("GET/excluir", new ExcluirUsuarioTarefa());
+		tarefas.put("POST/cadastrarPapel", new CadastrarPapelTarefa());
+		tarefas.put("GET/exibeFormCadastroPapel", new ExibeFormCadastroPapelTarefa());
 	}
 
 	public static Tarefa getTarefa(HttpServletRequest request) {
-		Tarefa tarefa = tarefas.get(request.getMethod() + request.getPathInfo());
+		System.out.println(request.getMethod() + request.getPathInfo());
+		Tarefa tarefa = tarefas.get(request.getMethod() + request.getPathInfo());	
+
 		if (tarefa != null)
 			return tarefa;
 		else

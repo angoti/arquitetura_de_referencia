@@ -12,18 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 import model.tarefa.FabricaDeTarefa;
 import model.tarefa.Tarefa;
 
-@WebServlet("/frontcontroller/*")
+@WebServlet("/sistema/*")
 public class FrontController extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		try {
 			Tarefa tarefa = FabricaDeTarefa.getTarefa(request);
 			String view = tarefa.executa(request, response);
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/" + view + ".jsp");
+			RequestDispatcher dispatcher = getServletContext()
+					.getRequestDispatcher("/" + view + ".jsp");
 			dispatcher.forward(request, response);
 		} catch (Exception e) {
 			throw new ServletException("Erro executando tarefa.", e);
 		}
+
 	}
 }

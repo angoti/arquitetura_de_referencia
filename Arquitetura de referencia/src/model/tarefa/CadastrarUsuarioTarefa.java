@@ -20,5 +20,4 @@ public class CadastrarUsuarioTarefa implements Tarefa {
 		request.setAttribute("msg", "parabéns usuario cadastrado com sucesso");
 		return "cadastroUsuario";
 	}
-
 }
